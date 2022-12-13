@@ -1,0 +1,38 @@
+{
+  "name": "cutly",
+  "version": "2.0.0",
+  "description": "Url shortener service built using MERN stack.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhkhanna/cutly.git"
+  },
+  "keywords": [
+    "url",
+    "url-shortener"
+  ],
+  "author": "Shubh Khanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhkhanna/cutly/issues"
+  },
+  "homepage": "https://github.com/shubhkhanna/cutly#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "nanoid": "^3.1.30",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "16.13.1"
+  }
+}
