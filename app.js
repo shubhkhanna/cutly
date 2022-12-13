@@ -1,15 +1,21 @@
-import express from "express";
-import dotenv from "dotenv";
-import path from "path";
-import connectDB from "./config/db.js";
-import urlRoutes from "./routes/urlRoutes.js";
-import cors from "cors";
+const express = require("express");
+const dotenv = require("dotenv");
+const path = require("path");
+const cors = require("cors");
+const connectDB = require("./config/db");
+const urlRoutes = require("./routes/urlRoutes");
 
+// create express app
+const app = express();
+
+// port number
+const port = process.env.PORT || 5000;
+
+// configure .env file
 dotenv.config();
 
+// Connecting to MongoDB
 connectDB();
-
-const app = express();
 
 // handle CORS errors
 app.use(cors());
@@ -27,8 +33,6 @@ if (process.env.NODE_ENV == "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-
-const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Server is running on PORT ${port}`);

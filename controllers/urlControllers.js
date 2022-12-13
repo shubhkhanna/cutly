@@ -1,6 +1,6 @@
-import urlModel from "../models/urlModel.js";
-import validUrl from "valid-url";
-import { nanoid } from "nanoid";
+const urlModel = require("../models/urlModel");
+const validUrl = require("valid-url");
+const { nanoid } = require("nanoid");
 
 // @desc redirecting to short url
 // @route GET /:id
@@ -55,4 +55,4 @@ const createUrl = async (req, res) => {
   }
 };
 
-export { redirectUrl, createUrl };
+module.exports = { redirectUrl, createUrl };

@@ -1,8 +1,8 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
-import { redirectUrl, createUrl } from "../controllers/urlControllers.js";
+const { redirectUrl, createUrl } = require("../controllers/urlControllers");
 
 router.route("/:id").get(redirectUrl);
 router.route("/create").post(createUrl);
 
-export default router;
+module.exports = router;
